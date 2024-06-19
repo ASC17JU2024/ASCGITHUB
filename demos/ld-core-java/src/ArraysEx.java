@@ -10,6 +10,7 @@ public class ArraysEx {
         // Sort the array in ascending order
         //Manual iterations
         Arrays.sort(vowels);
+        System.out.println(Arrays.toString(vowels));
 //        System.out.println("Sorted vowels : " + vowels);
         for(int i = 0; i<vowels.length; i++){
             System.out.println(vowels[i]);
@@ -29,11 +30,11 @@ public class ArraysEx {
             }
             else
             {
-                customToString = customToString + vowels[i] + ",";
+                customToString = customToString + vowels[i] + ", ";
             }
         }
         customToString += "]";
-        System.out.println(customToString);
+        System.err.println(customToString);
 
 // Normal (linear) search for an element in the array
 char searchChar = '9';
