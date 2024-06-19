@@ -7,5 +7,6 @@ public class C2P1 {
 //        System.out.println(c1P1.privateVar);
         System.out.println(c1P1.defaultVar);
         System.out.println(c1P1.publicVar);
+        System.out.println(c1P1.protectedVar);
     }
 }

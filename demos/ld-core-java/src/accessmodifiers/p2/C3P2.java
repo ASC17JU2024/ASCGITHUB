@@ -10,5 +10,6 @@ public class C3P2 {
 //    'defaultVar' is not public in 'accessmodifiers.p1.C1P1'. Cannot be accessed from outside package
 //        System.out.println(c1P1.defaultVar);
         System.out.println(c1P1.publicVar);
+//        System.out.println(c1P1.protectedVar);
     }
 }
