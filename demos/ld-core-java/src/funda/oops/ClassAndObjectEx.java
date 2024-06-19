@@ -1,3 +1,5 @@
+package funda.oops;
+
 public class ClassAndObjectEx {
     public static void main(String[] args) {
         //Create an object (reference + instance)
