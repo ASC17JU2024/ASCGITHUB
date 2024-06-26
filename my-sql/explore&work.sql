@@ -86,3 +86,23 @@ FROM order_items
 GROUP BY category
 HAVING SUM(quantity_ordered) > 18
 ORDER BY category DESC;
+
+SELECT * FROM actor WHERE first_name = 'Mike' AND last_name = 'Hillyer';
+SELECT category, SUM(quantity_ordered) FROM order_items GROUP BY category ORDER BY category DESC LIMIT 1 OFFSET 1;
+
+-- Retrieves categories where the total quantity ordered is greater than 18, ordered by category in descending order. Filters and ranks categories based on a specific condition.
+SELECT category, SUM(quantity_ordered) AS total_quantity_ordered
+FROM order_items
+GROUP BY category
+HAVING SUM(quantity_ordered) > 18
+ORDER BY category DESC;
+
+SELECT * FROM actor WHERE first_name = 'Mike' AND last_name = 'Hillyer';
+SELECT film_id FROM film WHERE title = 'Academy Dinosaur';
+SELECT inventory_id FROM inventory WHERE film_id = 1 AND store_id = 1;
+SELECT customer_id FROM customer WHERE first_name = 'Mary' AND last_name = 'Smith';
+SELECT staff_id FROM staff WHERE first_name = 'Mike' AND last_name = 'Hillyer';
+SELECT * FROM STAFF;
+
+INSERT INTO rental (rental_date, inventory_id, customer_id, staff_id, return_date, last_update)
+VALUES (NOW(), 2, 3, 4, NULL, NOW());
