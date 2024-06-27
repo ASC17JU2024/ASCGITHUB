@@ -106,3 +106,5 @@ SELECT * FROM STAFF;
 
 INSERT INTO rental (rental_date, inventory_id, customer_id, staff_id, return_date, last_update)
 VALUES (NOW(), 2, 3, 4, NULL, NOW());
+
+SELECT ALL DISTINCT FIRST_NAME FROM ACTOR;
