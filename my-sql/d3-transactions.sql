@@ -58,11 +58,11 @@ INSERT INTO customer VALUES (30, 'Bob');
 -- This insert is also automatically committed
 COMMIT;
 ROLLBACK;
-SELECT * FROM CUSTOMER;
+SELECT * FROM testdb.CUSTOMER;
 -- To demonstrate rollback, we'll disable autocommit, make changes, and then rollback
 SET autocommit = 0;
 START TRANSACTION;
-INSERT INTO customer VALUES (35, 'Charlie');
+INSERT INTO testdb.customer VALUES (35, 'Charlies');
 DELETE FROM customer WHERE B = 'Alice';
 
 -- Rollback the transaction (undo the insert and delete)
@@ -70,3 +70,4 @@ ROLLBACK;
 
 -- Re-enable autocommit mode
 SET autocommit = 1;
+
