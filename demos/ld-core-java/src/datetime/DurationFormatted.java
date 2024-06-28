@@ -2,7 +2,7 @@ package datetime;
 
 import java.time.Duration;
 
-public class DurationUtilsJava8 {
+public class DurationFormatted {
 
     // This method is already compatible with Java 8.
     public static Duration ofDays(long days) {
