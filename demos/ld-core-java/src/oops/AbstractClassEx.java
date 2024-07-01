@@ -15,6 +15,10 @@ public class AbstractClassEx {
         System.out.println("Lets go!");
         account = Math.random() > 0.5 ? (account = new SavingAccount()) : (account = new DigitalWallet());
         account.withdraw();
+
+//        account = new String();
+        SavingAccount savingAccount = new SavingAccount();
+        savingAccount.withdraw();
     }
 }
 
