@@ -48,6 +48,33 @@ JDBC (Java Database Connectivity) is an API (Application Programming Interface) 
 ```
 JDBC provides a flexible and efficient way to connect Java applications with a wide variety of databases, making it a fundamental technology for Java-based database applications. 
 
+### Pseudo Code for JdbcExample
+    
+        
+```java
+        // Load the MySQL JDBC driver
+        Class.forName("com.mysql.jdbc.Driver");
+    
+        // Establish a connection to the database
+        Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "user", "pass");
+    
+        // Create a Statement object
+        Statement stmt = conn.createStatement();
+    
+        // Execute a query
+        ResultSet rs = stmt.executeQuery("SELECT * FROM users");
+    
+        // Process the results
+        while (rs.next()) {
+            System.out.println(rs.getString("name"));
+        }
+    
+        // Close resources
+        rs.close();
+        stmt.close();
+        conn.close();
+```
+
 ### JDBC Example
 
 ```java
@@ -98,3 +125,4 @@ The core of JDBC revolves around a set of interfaces and classes in the `java.sq
 - **DataSource** (`javax.sql` package): While not part of `java.sql`, `DataSource` is an alternative to `DriverManager` for establishing database connections. It is preferred in newer applications, especially those running in enterprise environments, because it allows for connection pooling and distributed transactions.
 
 These components work together to provide a robust framework for database connectivity in Java applications. JDBC's flexibility and ease of use make it a popular choice for developers working with databases in Java.
+
