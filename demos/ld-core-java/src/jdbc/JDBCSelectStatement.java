@@ -7,7 +7,10 @@ public static void main(String[] args) {
 	Connection connection =null;
 	//Load the driver class
 	try {
-		Class.forName("com.mysql.jdbc.Driver");
+//		Class.forName("com.mysql.jdbc.Driver");
+		Class.forName("com.mysql.cj.jdbc.Driver");
+//		Loading class `com.mysql.jdbc.Driver'. This is deprecated. The new driver class is `com.mysql.cj.jdbc.Driver'.
+//		The driver is automatically registered and manual loading of the driver class is generally unnecessary.
 		System.out.println("Driver Loaded!");
 		connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/testdb", "root", "mysql");
 		//connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/testdb", "postgres", "postgresql");
