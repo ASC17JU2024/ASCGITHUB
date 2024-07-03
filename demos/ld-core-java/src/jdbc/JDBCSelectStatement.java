@@ -42,7 +42,7 @@ public static void main(String[] args) {
 			connection.close();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+//			e.printStackTrace();
 		}
 	}
 
