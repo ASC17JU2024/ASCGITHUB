@@ -126,3 +126,13 @@ The core of JDBC revolves around a set of interfaces and classes in the `java.sq
 
 These components work together to provide a robust framework for database connectivity in Java applications. JDBC's flexibility and ease of use make it a popular choice for developers working with databases in Java.
 
+## MySQL Error codes
+
+- **1062**: Indicates an attempt to insert a duplicate entry into a column with a unique constraint, such as a primary key or a unique index.
+- **1048**: Occurs when trying to insert `NULL` into a column that has been defined as not allowing null values.
+- **1451**: Happens when there's an attempt to delete or update a row that is currently referenced by a foreign key in another table, thus violating referential integrity.
+- **1452**: Arises when an insert or update operation fails because it would result in a violation of a foreign key constraint.
+- **1216**: Similar to 1452, indicating a failure to insert or update a child row due to a foreign key constraint.
+- **1217**: Similar to 1451, indicating a failure to delete or update a parent row that is referenced by a foreign key in another table.
+- **1364**: Occurs when an insert operation omits a column that does not have a default value and is not defined as nullable, thus violating the table's schema definition.
+- **1406**: Triggered when an attempt is made to insert or update a row with data that exceeds the column's maximum allowed length.
