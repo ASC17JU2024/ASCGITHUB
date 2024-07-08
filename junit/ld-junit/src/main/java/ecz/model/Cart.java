@@ -11,7 +11,7 @@ public class Cart {
             return;
         }
         if(product.getPrice()<0) {
-            System.out.println("Dear sir/sirlu or madam/madamlu the price of the product is negative. Please enter a positive price.");
+            System.out.println("The price of the product is negative. Please enter a positive price.");
             return;
         }
         products.add(product);
