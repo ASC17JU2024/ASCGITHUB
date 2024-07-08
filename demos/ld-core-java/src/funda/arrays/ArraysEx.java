@@ -12,6 +12,7 @@ public class ArraysEx {
         // Sort the array in ascending order
         //Manual iterations
         Arrays.sort(vowels);
+        Arrays.fill();
         System.out.println(Arrays.toString(vowels));
 //        System.out.println("Sorted vowels : " + vowels);
         for(int i = 0; i<vowels.length; i++){
