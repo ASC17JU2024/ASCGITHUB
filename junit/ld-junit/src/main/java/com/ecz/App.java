@@ -1,4 +1,4 @@
-package ecz;
+package com.ecz;
 
 /**
  * Hello world!

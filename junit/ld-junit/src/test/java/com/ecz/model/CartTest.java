@@ -1,14 +1,11 @@
-package model;
+package com.ecz.model;
 
 // Import static methods from Assertions class for easier readability in tests
-// Import BeforeEach annotation to specify a method to run before each test
-
-import ecz.model.Cart;
-import ecz.model.Product;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-
 import static org.junit.jupiter.api.Assertions.*;
+// Import BeforeEach annotation to specify a method to run before each test
+import org.junit.jupiter.api.BeforeEach;
+// Import Test annotation to denote test methods
+import org.junit.jupiter.api.Test;
 
 public class CartTest {
     // Declare Cart instance to test
@@ -49,5 +46,7 @@ public class CartTest {
         cart.addProduct(product2); // Add product2 to cart
         double expectedTotalPrice = product1.getPrice() + product2.getPrice(); // Calculate expected total price
         assertEquals(expectedTotalPrice, cart.getTotalPrice()); // Assert total price matches expected value
+
     }
+
 }

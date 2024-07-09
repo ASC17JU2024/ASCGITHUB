@@ -1,11 +1,8 @@
-package model;
+package com.ecz.model;
 
-import ecz.model.Cart;
-import ecz.model.Product;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.*; // Import static assertion methods for easy use in tests
+import org.junit.jupiter.api.BeforeEach; // Import BeforeEach annotation for initializing common objects before each test
+import org.junit.jupiter.api.Test; // Import Test annotation to mark methods as test cases
 
 //Define what and why edge cases are being tested
 //Edge cases are scenarios that are at the extreme ends of the range of possible inputs or conditions

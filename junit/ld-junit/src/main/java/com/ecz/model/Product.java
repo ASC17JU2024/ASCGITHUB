@@ -1,4 +1,6 @@
-package ecz.model;
+package com.ecz.model;
+
+import java.util.Objects;
 
 public class Product {
     private String id;
@@ -35,4 +37,19 @@ public class Product {
     public void setPrice(double price) {
         this.price = price;
     }
+
+    @Override
+public boolean equals(Object obj) {
+    if (this == obj) return true;
+    if (obj == null || getClass() != obj.getClass()) return false;
+    Product product = (Product) obj;
+    return Double.compare(product.price, price) == 0 &&
+           Objects.equals(id, product.id) &&
+           Objects.equals(name, product.name);
+}
+
+@Override
+public int hashCode() {
+    return Objects.hash(id, name, price);
+}
 }
