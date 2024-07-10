@@ -11,16 +11,16 @@ public class Cart {
             return;
         }
         if(product.getPrice()<0) {
-            System.out.println("Dear sir/sirlu or madam/madamlu the price of the product is negative. Please enter a positive price.");
+            System.out.println("The price of the product is negative. Please enter a positive price.");
             return;
         }
         products.add(product);
     }
 
     public void removeProduct(Product product) {
-        if (!products.contains(product)) {
-            throw new IllegalArgumentException("Product not found in the cart.");
-        }
+//        if (!products.contains(product)) {
+//            throw new IllegalArgumentException("Product not found in the cart.");
+//        }
         products.remove(product);
     }
 
@@ -30,7 +30,7 @@ public class Cart {
     }
 
     public int getProductCount() {
-        return products.size();
+        return products.size() ;
     }
 
     public List<Product> getProducts() {

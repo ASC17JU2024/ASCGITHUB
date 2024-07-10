@@ -99,12 +99,14 @@ public class CartTest1 {
     void testAddMultipleProducts() {
         cart.addProduct(product1);
         cart.addProduct(product2);
+        // assertIterableEquals checks if two iterables contain the same elements in the same order.
         assertIterableEquals(Arrays.asList(product1, product2), cart.getProducts(), "Cart should contain both added products.");
     }
 
     @Test
     void testProductNotSame() {
         Product anotherProduct1 = new Product("1", "Laptop", 999.99);
+        // assertNotSame checks if two objects are not the same instance.
         assertNotSame(product1, anotherProduct1, "Two product instances with the same properties should not be the same instance.");
     }
 }
