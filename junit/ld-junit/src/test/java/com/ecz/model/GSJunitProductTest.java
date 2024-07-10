@@ -38,7 +38,11 @@ package com.ecz.model;
 //     }
 // }
 
+// JUnit Lifecycle
+// JUnit provides annotations to define the lifecycle of a test case.
+// These annotations are used to perform actions before and after the test methods.
 
+import com.ecz.exceptions.InvalidProductException;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -47,12 +51,20 @@ public class GSJunitProductTest {
     private GSJunitProduct product;
     @Test
     void testProductShouldNotBeCreated() {
-       assertThrows(UnsupportedOperationException.class, () ->new GSJunitProduct());
+        assertThrows(UnsupportedOperationException.class, () -> new GSJunitProduct());
+//       void method() {
+//            new GSJunitProduct();
+//        }
     }
 
     @Test
     void testProductCreation() {
-        product = new GSJunitProduct("1", "Laptop", 999.99);
+        product = new GSJunitProduct("1", "Laptop", -999.99);
         assertNotNull(product);
+    }
+
+    @Test
+    void testProductCreationWithNegativePrice() {
+        assertThrows(InvalidProductException.class, () -> new GSJunitProduct("1", "Laptop", -999.99));
     }
 }
