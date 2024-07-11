@@ -2,19 +2,68 @@ package com.ecz.model;
 
 // Import static methods from Assertions class for easier readability in tests
 import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
+import org.junit.jupiter.params.provider.ValueSource;
+
+import java.util.stream.Stream;
+
 // Import BeforeEach annotation to specify a method to run before each test
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.MethodOrderer;
+import org.junit.jupiter.api.Order;
 // Import Test annotation to denote test methods
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestMethodOrder;
 
-public class CartTest {
+ @TestMethodOrder(MethodOrderer.MethodName.class)
+//@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
+public class CartParameterizedTest {
     // Declare Cart instance to test
     private Cart cart;
     // Declare Product instances for testing
+    private Product product;
     private Product product1;
     private Product product2;
 
-    
+        // Provide test data for parameterized tests
+//    static Stream<Product> productProvider() {
+//        return Stream.of(
+//            new Product("1", "Laptop", 999.99),
+//            new Product("2", "Smartphone", 499.99),
+//                new Product("3", "Tablet", 299.99)
+//        );
+//    }
+
+   
+    @ParameterizedTest
+    @ValueSource(ints = {1, 2, 5, 10})
+    void testSetProductQuantity(int quantity) {
+        product = new Product("1", "Laptop", 999.99);
+        cart.addProduct(product);
+        cart.setProductQuantity(product, quantity);
+        assertEquals(quantity, cart.getProductQuantity(product));
+    }
+//    @Order(2)
+    @ParameterizedTest
+//    @MethodSource("productProvider")
+    @MethodSource("com.ecz.model.ProductDataProvider#productProvider")
+    void testAddProduct(Product product) {
+        cart.addProduct(product);
+        assertEquals(1, cart.getProductCount());
+        assertTrue(cart.getProducts().contains(product));
+    }
+
+    @ParameterizedTest
+//    @MethodSource("productProvider")
+    @MethodSource("com.ecz.model.ProductDataProvider#productProvider")
+    void testRemoveProduct(Product product) {
+        cart.addProduct(product);
+        cart.removeProduct(product);
+        assertEquals(0, cart.getProductCount());
+        assertFalse(cart.getProducts().contains(product));
+    }
+
     @BeforeEach
         // Setup method to initialize common objects before each test
     void setUp() {
@@ -22,7 +71,7 @@ public class CartTest {
         product1 = new Product("1", "Laptop", 999.99); // Initialize first test Product
         product2 = new Product("2", "Smartphone", 499.99); // Initialize second test Product
     }
-
+//    @Order(1)
     @Test
         // Test adding a product to the cart
     void testAddProduct() {
