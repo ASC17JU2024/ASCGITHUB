@@ -9,8 +9,6 @@ CREATE TABLE user (
   PRIMARY KEY (user_id)
 ) ;
 select * from user;
-select * from user where user_id = 1 and `FIRST_NAME` = 'John';
-delete from user;
 
 INSERT INTO user (user_id, email, first_name, last_name) VALUES
 (1, 'user1@example.com', 'John', 'Doe'),
