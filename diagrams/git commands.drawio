@@ -1,0 +1,70 @@
+<mxfile host="Electron" modified="2024-07-22T02:57:17.802Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.6.4 Chrome/124.0.6367.207 Electron/30.0.6 Safari/537.36" etag="C-pUb1bJiCi5OnDjJP_o" version="24.6.4" type="device">
+  <diagram name="Page-1" id="2U8KniABDTVUWfv4WbzC">
+    <mxGraphModel dx="1124" dy="828" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" background="#ffffff" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#000000;" vertex="1" parent="1" target="3">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-507" y="104" as="sourcePoint" />
+            <mxPoint x="-297" y="-16" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#000000;" vertex="1" parent="1" target="4">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-507" y="224" as="sourcePoint" />
+            <mxPoint x="-297" y="-16" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#000000;" vertex="1" parent="1" source="4">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-507" y="224" as="targetPoint" />
+            <mxPoint x="-297" y="-16" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#000000;" vertex="1" parent="1" source="3">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-507" y="104" as="targetPoint" />
+            <mxPoint x="-297" y="-16" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PnyW25L8B6Tp1Juihkk--32" value="Create a Repository" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#87CEFA;align=center;fontSize=18;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="173" y="24" width="300" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="PnyW25L8B6Tp1Juihkk--33" value="From scratch -- Create a new local repository&#xa;$ git init [project name]&#xa;Download from an existing repository&#xa;$ git clone my_url" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#FFFFFF;align=left;fontSize=14;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="173" y="64" width="300" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="PnyW25L8B6Tp1Juihkk--34" value="Observe your Repository" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#87CEFA;align=center;fontSize=18;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="173" y="154" width="300" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="PnyW25L8B6Tp1Juihkk--35" value="List new or modified files not yet committed&#xa;$ git status&#xa;Show the changes to files not yet staged&#xa;$ git diff&#xa;Show the changes to staged files&#xa;$ git diff --cached&#xa;Show all staged and unstaged file changes&#xa;$ git diff HEAD&#xa;Show the changes between two commit ids&#xa;$ git diff commit1 commit2&#xa;List the change dates and authors for a file&#xa;$ git blame [file]&#xa;Show the file changes for a commit id and/or file&#xa;$ git show [commit]:[file]&#xa;Show full change history&#xa;$ git log&#xa;Show change history for file/directory including diffs&#xa;$ git log -p [file/directory]" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#FFFFFF;align=left;fontSize=14;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="173" y="194" width="300" height="400" as="geometry" />
+        </mxCell>
+        <mxCell id="PnyW25L8B6Tp1Juihkk--36" value="Working with Branches" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#7FFF00;align=center;fontSize=18;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="493" y="24" width="300" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="PnyW25L8B6Tp1Juihkk--37" value="List all local branches&#xa;$ git branch&#xa;List all branches, local and remote&#xa;$ git branch -av&#xa;Switch to a branch, my_branch, and update working directory&#xa;$ git checkout my_branch&#xa;Create a new branch called new_branch&#xa;$ git branch new_branch&#xa;Delete the branch called my_branch&#xa;$ git branch -d my_branch&#xa;Merge branch_a into branch_b&#xa;$ git checkout branch_b&#xa;$ git merge branch_a&#xa;Tag the current commit&#xa;$ git tag my_tag" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#FFFFFF;align=left;fontSize=14;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="493" y="64" width="300" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="PnyW25L8B6Tp1Juihkk--38" value="Make a Change" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#FFD700;align=center;fontSize=18;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="827" y="-19" width="300" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="PnyW25L8B6Tp1Juihkk--39" value="Stages the file, ready for commit&#xa;$ git add [file]&#xa;Stage all changed files, ready for commit&#xa;$ git add .&#xa;Commit all staged files to versioned history&#xa;$ git commit -m &quot;commit message&quot;&#xa;Commit all your tracked files to versioned history&#xa;$ git commit -am &quot;commit message&quot;&#xa;Unstages file, keeping the file changes&#xa;$ git reset [file]&#xa;Revert everything to the last commit&#xa;$ git reset --hard" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#FFFFFF;align=left;fontSize=14;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="830" y="28" width="300" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="PnyW25L8B6Tp1Juihkk--40" value="Synchronize" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#FFA500;align=center;fontSize=18;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="833" y="274" width="300" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="PnyW25L8B6Tp1Juihkk--41" value="Get the latest changes from origin (no merge)&#xa;$ git fetch&#xa;Fetch the latest changes from origin and merge&#xa;$ git pull&#xa;Fetch the latest changes from origin and rebase&#xa;$ git pull --rebase&#xa;Push local changes to the origin&#xa;$ git push" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#FFFFFF;align=left;fontSize=14;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="833" y="314" width="300" height="138" as="geometry" />
+        </mxCell>
+        <mxCell id="PnyW25L8B6Tp1Juihkk--42" value="Finally!" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#FF6347;align=center;fontSize=18;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="830" y="470" width="300" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="PnyW25L8B6Tp1Juihkk--43" value="When in doubt, use git help&#xa;$ git command --help&#xa;Or visit https://training.github.com/ for official GitHub training." style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#FFFFFF;align=left;fontSize=14;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="830" y="510" width="300" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
