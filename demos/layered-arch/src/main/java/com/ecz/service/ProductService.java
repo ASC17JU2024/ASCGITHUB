@@ -13,9 +13,10 @@ public class ProductService {
         if (product.getPrice() < 0) {
             System.out.println("Price cannot be negative");
         } else {
-           isAdded =  productRepository.addProductToCart(product);
+//           isAdded =  productRepository.addProductToCollectionCart(product);
+            isAdded =  productRepository.addProducttoCart(product);
         }
-
         return isAdded;
     }
 }
+

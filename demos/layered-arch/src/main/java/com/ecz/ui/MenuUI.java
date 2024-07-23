@@ -19,7 +19,7 @@ public class MenuUI {
 //        System.out.println("Enter Product ID: ");
 //        System.out.println("Enter Product Name: ");
 //        System.out.println("Enter Product Price: ");
-        Product product =  new Product("1", "Laptop", 999.99, 1);
+        Product product =  new Product("100", "Laptop", 999.99, 1);
         boolean  isAdded = productService.addProduct(product);
         if (isAdded) {
             System.out.println("Product added successfully");

@@ -85,8 +85,7 @@ public class ProductExplore implements  Comparable<ProductExplore> {
     // The purpose of the if statement after the else statement is to check if the name of the two objects is equal.
     // What is the purpose of the return statement after the if statement in the equals method?
     // The purpose of the return statement after the if statement is to return false if the name of the two objects is not equal.
-    // What is the purpose of the else statement after the if statement in the equals method?
-    // The purpose of the else statement after the if statement is to check if the price of the two objects is equal.
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
