@@ -1,5 +1,6 @@
 Sure, here is the detailed SDLC Waterfall model for the Taj Hotels project, including the different documents created during each phase:
 
+
 ---
 
 ### Case Study: Taj Hotels Affordable Rooms for Freshers
