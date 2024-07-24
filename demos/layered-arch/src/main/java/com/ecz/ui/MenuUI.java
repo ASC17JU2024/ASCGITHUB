@@ -2,9 +2,10 @@ package com.ecz.ui;
 
 import com.ecz.model.Product;
 import com.ecz.service.ProductService;
+import com.ecz.service.ProductServiceAIImpl;
 
 public class MenuUI {
-    ProductService productService = new ProductService();
+    ProductService productService = new ProductServiceAIImpl();
 //    What is UI?
 //    UI stands for User Interface. It is the part of the application that the user interacts with
     void accessMenu() {
@@ -19,7 +20,7 @@ public class MenuUI {
 //        System.out.println("Enter Product ID: ");
 //        System.out.println("Enter Product Name: ");
 //        System.out.println("Enter Product Price: ");
-        Product product =  new Product("1001", "Laptop", 999.99, 1);
+        Product product =  new Product("1002", "Laptop", 999.99, 1);
         boolean  isAdded = productService.addProduct(product);
         if (isAdded) {
             System.out.println("Product added successfully");
