@@ -1,4 +1,4 @@
-package com.demo;
+package com.ecz;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

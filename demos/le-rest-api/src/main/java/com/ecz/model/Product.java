@@ -1,4 +1,4 @@
-package com.demo.model;
+package com.ecz.model;
 
 public class Product {
     //What is a model?
