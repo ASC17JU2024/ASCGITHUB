@@ -2,16 +2,17 @@ package com.ecz.service;
 
 import com.ecz.model.Product;
 import com.ecz.repository.ProductRepository;
+import com.ecz.repository.ProductRepositoryAI;
 import com.ecz.repository.ProductRepositoryDbImpl;
 
 import java.util.Collections;
 import java.util.List;
 
-public class ProductServiceAIImpl implements ProductService{
+public class ProductServiceAIImpl implements ProductServiceAI{
 
     //What is a service?
     //A service is a class that provides business logic to the application.
-    ProductRepository productRepository = new ProductRepositoryDbImpl();
+    ProductRepositoryAI productRepository = new ProductRepositoryDbImpl();
     public boolean addProduct(Product product) {
         boolean isAdded = validateProductPriceAI(product);
         return isAdded;
@@ -21,7 +22,6 @@ public class ProductServiceAIImpl implements ProductService{
     public List<Product> getAllProducts() {
         return productRepository.getAllProducts();
     }
-
 
     public boolean validateProductPriceAI(Product product) {
         System.out.println("AI validation for product price");
@@ -33,6 +33,10 @@ public class ProductServiceAIImpl implements ProductService{
             isAdded =  productRepository.addProductToCart(product);
         }
         return isAdded;
+    }
+    // update product
+    public boolean updateProduct(Product product) {
+        return productRepository.updateProduct(product);
     }
 }
 

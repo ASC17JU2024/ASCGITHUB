@@ -9,10 +9,10 @@ import java.util.List;
 import java.util.Map;
 
 
-public class ProductRepositoryDbImpl implements  ProductRepository {
+public class ProductRepositoryDbImpl implements  ProductRepositoryAI {
     //What is a repository?
     //A repository is a class that provides CRUD operations on the model.
-
+@Override
     public boolean addProductToCart(Product product) {
         // Load the driver class
         try {
@@ -46,6 +46,7 @@ public class ProductRepositoryDbImpl implements  ProductRepository {
         }
         return null;
     }
+    @Override
     // method to return all the products from the database as a list
     public List<Product> getAllProducts() {
         List<Product> products = new ArrayList<>();
@@ -68,6 +69,24 @@ public class ProductRepositoryDbImpl implements  ProductRepository {
         return products;
     }
 
+    //Is Product a DTO?
+    //Yes, Product is a Data Transfer Object.
+    //What is a Data Transfer Object?
+    //A Data Transfer Object is a class that represents the data that is transferred between the client and the server.
+    // update product
+    @Override
+    public boolean updateProduct(Product product) {
+        try {
+            Connection connection = getConnection();
+            Statement statement = connection.createStatement();
+            String updateQuery = "UPDATE product SET name = '" + product.getName() + "', price = " + product.getPrice() + ", quantity = " + product.getQuantity() + " WHERE id = '" + product.getId() + "';";
+            int noOfRowsAffected = statement.executeUpdate(updateQuery);
+            return noOfRowsAffected > 0;
+        } catch (SQLException sqlException) {
+            System.out.println(sqlException.getMessage());
+        }
+        return false;
+    }
 
 }
 

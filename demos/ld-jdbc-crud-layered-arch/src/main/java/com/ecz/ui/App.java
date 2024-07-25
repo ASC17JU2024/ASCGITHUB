@@ -11,6 +11,8 @@ public class App
         MenuUI menuUI = new MenuUI();
 //        menuUI.accessMenu();
 //        menuUI.addProduct();
+//        menuUI.getAllProducts();
+menuUI.updateProduct();
         menuUI.getAllProducts();
     }
 }
