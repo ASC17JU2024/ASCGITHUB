@@ -6,7 +6,7 @@ package exceptions;
 public class ArrayIndexOutOfBoundsEx {
 	public static void main(String[] args) {
 
-		int numbers[] = { 2, 3, 5 };
+		int [] numbers = { 2, 3, 5 };
 //		for (int i = 0; i <= numbers.length; i++) {
 //			System.err.println(numbers[i]);
 //		}

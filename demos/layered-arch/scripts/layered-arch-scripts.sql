@@ -18,3 +18,4 @@ INSERT INTO product (id, name, price, quantity) VALUES ('1', 'Laptop', 999.99, 1
 
 -- Select all records from MySQL table
 SELECT * FROM product ;
+

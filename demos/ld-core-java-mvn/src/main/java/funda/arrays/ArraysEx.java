@@ -14,11 +14,11 @@ public class ArraysEx {
         Arrays.sort(vowels);
 
         System.out.println(Arrays.toString(vowels));
-//        System.out.println("Sorted vowels : " + vowels);
+
         for(int i = 0; i<vowels.length; i++){
             System.out.println(vowels[i]);
         }
- //       System.out.println("Sorted array in ascending order: " + Arrays.toString(vowels));
+
 
         // Sort the array in descending order
         char[] reverse = new char[vowels.length];
