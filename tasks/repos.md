@@ -1,5 +1,3 @@
-Here are the names with the prefix and running numbers:
-
 1. ASC1Abhishek
 2. ASC2Balasaranya
 3. ASC3Banu
@@ -13,5 +11,5 @@ Here are the names with the prefix and running numbers:
 11. ASC11SriNandhish
 12. ASC12Sruthi
 13. ASC13Swetha
-14. ASC14Syamala
+14. ASC14Pranavi
 15. ASC15Varshitha
