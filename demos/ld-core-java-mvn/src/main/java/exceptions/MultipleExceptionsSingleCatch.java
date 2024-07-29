@@ -13,7 +13,7 @@ public class MultipleExceptionsSingleCatch {
 			System.out.println(test50.value);
 			int i = 200;
 			// ArithmeticException
-			int result = i / 0;
+			int result = i / 100;
 			System.out.println(result);
 			// System.out.println(Test50.value);
 

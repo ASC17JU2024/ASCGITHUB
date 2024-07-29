@@ -15,10 +15,7 @@ public class CustomCheckedExceptionEx {
         }
         catch(AgeInvalidException1 ageInvalidException) {
             logger.severe("Exception occurred: " + ageInvalidException.getMessage());
-
-
         }
-
     }
 }
  class AgeInvalidException1 extends Exception {

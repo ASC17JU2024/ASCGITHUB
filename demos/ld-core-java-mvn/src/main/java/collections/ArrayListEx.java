@@ -40,7 +40,7 @@ public class ArrayListEx {
 		else {
 			 System.err.println ("Colors are not same");
 		}
-		if(color1 == color2){
+		if(color1.equals(color2)){
 			System.err.println("Identical");
 		}
 		System.out.println(colors.get(4));

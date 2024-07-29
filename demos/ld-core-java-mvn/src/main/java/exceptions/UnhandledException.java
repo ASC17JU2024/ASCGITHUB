@@ -16,7 +16,7 @@ public class UnhandledException {
 
 	private static void called() {
 		System.err.println("The calculator app");
-		int num1 = 0, num2 = 200;
+		int num1 = 100, num2 = 200;
 		// exception occurs at thes line
 		int result = num2 / num1;
 		// program shuts down improperly
