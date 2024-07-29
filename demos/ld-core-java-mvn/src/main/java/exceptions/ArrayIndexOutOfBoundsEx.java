@@ -1,23 +1,29 @@
 package exceptions;
 
-// IP : divide by a string accepted from user.
-// Exception : abnormal situations that occur during the execution of a program
-// java.lang.ArithmeticException
-public class ArrayIndexOutOfBoundsEx {
-	public static void main(String[] args) {
+import java.util.logging.Level;
 
-		int [] numbers = { 2, 3, 5 };
-//		for (int i = 0; i <= numbers.length; i++) {
-//			System.err.println(numbers[i]);
-//		}
-		System.out.println(numbers[0]);
-		try {
-		System.out.println(numbers[3]);
-		}
-		catch (ArrayIndexOutOfBoundsException arrayIndexOutOfBoundsException) {
-			System.err.println("Check the index...");
-		}
-		System.out.println(numbers[2]);
-		
-	}
+import java.util.logging.Logger;
+//The java.util.logging package provides several logging levels to categorize the importance and severity of log messages. Here are the different logging levels, from highest to lowest severity:
+//SEVERE: Indicates a serious failure.
+//WARNING: Indicates a potential problem.
+//INFO: Provides informational messages that highlight the progress of the application.
+//        ALL: Enables logging of all messages.
+//        OFF: Disables logging.
+
+public class ArrayIndexOutOfBoundsEx {
+    private static final Logger logger = Logger.getLogger("ArrayIndexOutOfBoundsEx");
+
+    public static void main(String[] args) {
+
+        int[] numbers = {2, 3, 5};
+
+        logger.info(String.valueOf(numbers[0]));
+        try {
+            logger.info(String.valueOf(numbers[3]));
+//            logger.info(String.valueOf(numbers[1]));
+        } catch (ArrayIndexOutOfBoundsException arrayIndexOutOfBoundsException) {
+            logger.log(Level.SEVERE, "Check the index...", arrayIndexOutOfBoundsException);
+        }
+        logger.info(String.valueOf(numbers[2]));
+    }
 }
