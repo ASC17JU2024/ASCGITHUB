@@ -235,6 +235,103 @@ public class Employee {
 
 
 ```
+:green_book: **5 CREATE THE REPOSITORY**  
+```java
+package com.demo.repository;
+
+import com.demo.entity.Employee;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface EmployeeRepository  extends JpaRepository<Employee, Long> {
+}
+
+```
+
+:green_book: **6 CREATE THE CONTROLLER**  
+```java
+package com.demo.controller;
+
+import com.demo.entity.Employee;
+import com.demo.repository.EmployeeRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
+
+@RestController
+@RequestMapping("/api")
+public class EmployeeController {
+//    IOC Container will create and  inject the EmployeeRepository bean into this field.
+
+    private final EmployeeRepository  employeeRepository;
+    @Autowired
+    public  EmployeeController(EmployeeRepository employeeRepository) {
+        this.employeeRepository = employeeRepository;
+    }
+    @GetMapping("/employees")
+    List<Employee> getAllEmployees() {
+      return  employeeRepository.findAll();
+    }
+}
+
+```
+
+:green_book: **7 CONFIGURE THE SPRINGBOOT APP**  
+```java
+package com.demo;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class App 
+{
+    public static void main( String[] args )
+    {
+        SpringApplication.run(App.class, args);
+    }
+}
+
+```
+
+:green_book: **8 SQL SCRIPTS**  
+
+```sql
+CREATE DATABASE SBDB1;
+use SBDB1;
+SELECT * FROM EMPLOYEES;
+INSERT INTO EMPLOYEES VALUES(1,'N@N.COM','Nishant','N');
+INSERT INTO EMPLOYEES VALUES(2,'a@a.COM','Awez','N');
+```
+
+:green_book: **9 TEST**  
+```sh
+http://localhost:8080/api/employees
+```
+```json
+[
+{
+"id": 1,
+"firstName": "rambo",
+"lastName": "john",
+"emailId": "r@r.com"
+},
+{
+"id": 2,
+"firstName": "rambo2",
+"lastName": "john2",
+"emailId": "r2@r.com"
+}
+]
+```
+
+
+
+
 
 
 
