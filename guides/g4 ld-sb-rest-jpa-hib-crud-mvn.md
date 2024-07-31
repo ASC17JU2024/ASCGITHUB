@@ -11,7 +11,9 @@ Archetype : org.apache.maven.> archetypes:maven-archetype-quickstart
 
 :beginner: _**Configure Spring Boot Project**_  
 
-:one: Add spring boot manven dependencies inside `<project>`
+:point_right: Add spring boot manven dependencies  
+
+:one:  inside `<project>`
 ```xml
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -34,6 +36,36 @@ Archetype : org.apache.maven.> archetypes:maven-archetype-quickstart
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
+```
+```xml
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-data-jpa</artifactId>
+    </dependency>
+```
+```xml
+    <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+    </dependency>
+```
+```xml
+      <dependency>
+          <groupId>org.springframework.boot</groupId>
+          <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+      </dependency>
+```
+:three:  inside `<project>`
+```xml
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
 ```
 
 
