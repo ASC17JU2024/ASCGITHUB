@@ -23,4 +23,8 @@ public class EmployeeController {
     List<Employee> getAllEmployees() {
       return  employeeRepository.findAll();
     }
+    @GetMapping("/getHTMLContent")
+    public String getHTMLContent() {
+        return "<html><head><title>Welcome</title></head><body><h1 style=\"color:green\">Rest API can also expose HTML Data</h1></body></html>";
+    }
 }
