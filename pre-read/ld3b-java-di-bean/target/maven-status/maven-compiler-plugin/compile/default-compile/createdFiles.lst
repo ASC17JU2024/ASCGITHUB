@@ -1,0 +1,6 @@
+dom\service\ProductService.class
+dom\repository\ProductRepository.class
+dom\service\ProductServiceImpl.class
+dom\model\Product.class
+dom\ui\App.class
+dom\repository\ProductRepositoryImpl.class
