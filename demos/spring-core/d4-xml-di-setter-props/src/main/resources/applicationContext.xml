@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!-- ProductRepository productRepository = new ProductRepositoryImpl();-->
+    <bean id="productRepository" class="dom.repository.ProductRepositoryImpl"/>
+    <bean id="productService" class="dom.service.ProductServiceImpl">
+        <!-- <constructor-arg ref="productRepository"/> -->
+        <property name="productRepository" ref="productRepository"/>
+    </bean>
+<!--    Create and inject another Repository named ProductRepositoryNewImpl along with the previous repository in a single constructor-->
+</beans>
