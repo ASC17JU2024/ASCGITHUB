@@ -5,8 +5,9 @@ import java.util.List;
 
 import dom.model.Product;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
-@Component("productRepository")
+@Repository("productRepository")
 public class ProductRepositoryImpl implements ProductRepository {
 
 	public  ProductRepositoryImpl() {

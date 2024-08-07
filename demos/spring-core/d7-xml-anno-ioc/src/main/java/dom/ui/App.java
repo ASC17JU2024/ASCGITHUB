@@ -25,6 +25,7 @@ public class App {
 //            System.out.println(product);
 //        }
 //        ((ClassPathXmlApplicationContext)classPathXmlApplicationContext).close();
+        System.out.println("A simple java app....");
         ApplicationContext classPathXmlApplicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");
         ProductRepository productRepository = classPathXmlApplicationContext.getBean("productRepository", ProductRepository.class);
         System.out.println(productRepository);
