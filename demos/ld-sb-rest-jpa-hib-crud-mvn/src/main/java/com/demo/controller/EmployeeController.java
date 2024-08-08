@@ -59,4 +59,34 @@ List<Employee> getAllEmployees() {
         employeeFromDB.setEmailId(employeeFromClient.getEmailId());
         return employeeRepository.save(employeeFromDB);
     }
+
+    @GetMapping("/employees/email/{emailId}")
+    public Employee getEmployeeByEmailId(@PathVariable String emailId) {
+        return employeeRepository.findByEmailId(emailId);
+    }
+
+    @GetMapping("/employees/firstname/{name}")
+    public Employee getEmployeeByFirstName(@PathVariable String name) {
+        return employeeRepository.findByFirstName(name);
+    }
+
+    @GetMapping("/employees/firstname/{name}/email/{email}")
+    public Employee getEmployeeByFirstNameAndEmailId(@PathVariable String name, @PathVariable String email) {
+        return employeeRepository.findByFirstNameAndEmailId(name, email);
+    }
+
+    @GetMapping("/employees/firstname/{name}/or/email/{email}")
+    public Employee getEmployeeByFirstNameOrEmailId(@PathVariable String name, @PathVariable String email) {
+        return employeeRepository.findByFirstNameOrEmailId(name, email);
+    }
+
+    @GetMapping("/employees/orderbyfirstnameasc")
+    public List<Employee> getAllEmployeesOrderByFirstNameAsc() {
+        return employeeRepository.findAllByOrderByFirstNameAsc();
+    }
+
+    @GetMapping("/employees/orderbyfirstnameasc/lastnameasc")
+    public List<Employee> getAllEmployeesOrderByFirstNameAscLastNameDesc() {
+        return employeeRepository.findAllByOrderByFirstNameAscLastNameDesc();
+    }
 }

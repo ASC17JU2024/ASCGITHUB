@@ -1,0 +1,266 @@
+{
+    "info": {
+        "_postman_id": "3ab257f8-c87e-421b-97d9-5e2f6ca26485",
+        "name": "ld-sb-rest-jpa-hib-crud-mvn-1",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "_exporter_id": "25931221"
+    },
+    "item": [
+        {
+            "name": "employees",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8080/api/employees",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "employees"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "employees/{1}",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8080/api/employees/1",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "employees",
+                        "1"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "delete/{1}",
+            "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8080/api/employees/1",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "employees",
+                        "1"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "employee",
+            "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\r\n    \"id\":0,\r\n    \"firstName\": \"Asc\",\r\n    \"lastName\": \"Johny\",\r\n    \"emailId\": \"m@m.com\"\r\n\r\n}",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "http://localhost:8080/api/employees",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "employees"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "employees",
+            "request": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\r\n    \"id\": 1,\r\n    \"firstName\": \"Nandhish\",\r\n    \"lastName\": \"The Boss\",\r\n    \"emailId\": \"m@m.com\"\r\n}",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "http://localhost:8080/api/employees",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "employees"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "employees/email/{emailId}",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8080/api/employees/email/{emailId}",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "employees",
+                        "email",
+                        "{emailId}"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "employees/firstname/{name}",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8080/api/employees/firstname/{name}",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "employees",
+                        "firstname",
+                        "{name}"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "employees/firstname/{name}/email/{email}",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8080/api/employees/firstname/{name}/email/{email}",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "employees",
+                        "firstname",
+                        "{name}",
+                        "email",
+                        "{email}"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "employees/firstname/{name}/or/email/{email}",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8080/api/employees/firstname/{name}/or/email/{email}",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "employees",
+                        "firstname",
+                        "{name}",
+                        "or",
+                        "email",
+                        "{email}"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "employees/orderbyfirstnameasc",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8080/api/employees/orderbyfirstnameasc",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "employees",
+                        "orderbyfirstnameasc"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "employees/orderbyfirstnameasc/lastnameasc",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8080/api/employees/orderbyfirstnameasc/lastnameasc",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "employees",
+                        "orderbyfirstnameasc",
+                        "lastnameasc"
+                    ]
+                }
+            },
+            "response": []
+        }
+    ]
+}
