@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script>
+        let testInputControl = document.forms['testForm']['testInput'].value;
+        alert(testInputControl);
+    </script> -->
+    <script>
+        function test() {
+        let testInputControl = document.forms['testForm']['testInput'];
+        let testInputControlValue = testInputControl.value;
+        document.getElementById("resultsDiv").innerText = testInputControlValue;
+        return false;
+    }
+    </script>
+</head>
+<body>
+    <form name="testForm" onsubmit="return test()">
+      <input type="text" name="testInput" value="test dom">
+      <input type="submit" value="Perform DOM">
+      <div id="resultsDiv">results here....</div>
+    </form>
+    <!-- <script>
+        let testInputControl = document.forms['testForm']['testInput'].value;
+        alert(testInputControl);
+    </script> -->
+</body>
+</html>
