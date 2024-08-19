@@ -113,3 +113,6 @@ Now, you should be connected to your Windows instance via RDP. Let me know if yo
 :loudspeaker: *#eureka.client.service-url.defaultZone=http://ec2-52-90-222-78.compute-1.amazonaws.com:8761/eureka/*  
 
 ssh -i "ld3a-ec2-product-microservice-key-pair.pem" ec2-user@ec2-98-81-96-172.compute-1.amazonaws.com
+
+
+password : 1uJZG&)s7J*3J$3j2!($myL!SXZdB%NP
