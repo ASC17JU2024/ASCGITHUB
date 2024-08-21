@@ -1,11 +1,6 @@
 package fileio;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 
 public class ObjectInputAndOutputStreamEx {
@@ -16,7 +11,7 @@ public class ObjectInputAndOutputStreamEx {
         ProductModel product3 = new ProductModel("P003", "The Alchemist", 30.75f);
 
         // Write a single product
-        writeProduct(product1);
+//        writeProduct(product1);
 
         // Read and print a single product
         ProductModel readProduct = readProduct();
@@ -54,8 +49,16 @@ public class ObjectInputAndOutputStreamEx {
         try (FileInputStream fileInputStream = new FileInputStream("single_product.dat");
              ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream)) {
             return (ProductModel) objectInputStream.readObject();
-        } catch (IOException | ClassNotFoundException e) {
-            e.printStackTrace();
+        } catch ( ClassNotFoundException e) {
+            System.out.println( "IO Exception");
+            return null;
+        }
+        catch (EOFException e) {
+            System.out.println( "Exception " + e);
+            return null;
+        }
+        catch (Exception e){
+            System.out.println( "Exception " + e);
             return null;
         }
     }
