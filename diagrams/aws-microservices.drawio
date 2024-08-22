@@ -1,4 +1,4 @@
-<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.5 Chrome/126.0.6478.183 Electron/31.3.0 Safari/537.36" version="24.7.5">
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.5 Chrome/126.0.6478.183 Electron/31.3.0 Safari/537.36" version="24.7.5" pages="2">
   <diagram name="Page-1" id="6AnjgJl4m1_xu4CjwL9G">
     <mxGraphModel dx="1050" dy="1721" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -343,6 +343,44 @@
         </mxCell>
         <mxCell id="43DrkjbEzCUivdf8AP8T-137" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="43DrkjbEzCUivdf8AP8T-134" target="43DrkjbEzCUivdf8AP8T-132">
           <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="qAnvKQ0jKetL_zttTP2N" name="COORDINATING MICROSERVICES">
+    <mxGraphModel dx="1900" dy="1721" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="N2piqDEVKtFyNAL_sK7T-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="N2piqDEVKtFyNAL_sK7T-1" target="N2piqDEVKtFyNAL_sK7T-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="N2piqDEVKtFyNAL_sK7T-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="N2piqDEVKtFyNAL_sK7T-1" target="N2piqDEVKtFyNAL_sK7T-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="N2piqDEVKtFyNAL_sK7T-1" value="CurrencyConversion&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;div&gt;8001&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="150" y="120" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="N2piqDEVKtFyNAL_sK7T-2" value="CurrencyExchange&lt;div&gt;8000&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="510" y="120" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="N2piqDEVKtFyNAL_sK7T-4" value="H2 IN MEMORY DATABASE" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="190" y="230" width="60" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="N2piqDEVKtFyNAL_sK7T-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="N2piqDEVKtFyNAL_sK7T-5" target="N2piqDEVKtFyNAL_sK7T-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="N2piqDEVKtFyNAL_sK7T-5" value="proxy" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="270" y="50" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="N2piqDEVKtFyNAL_sK7T-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="N2piqDEVKtFyNAL_sK7T-10" target="N2piqDEVKtFyNAL_sK7T-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="N2piqDEVKtFyNAL_sK7T-10" value="@GetMapping(value = &quot;/currency-converter/from/{from}/to/{to}/quantity/{quantity}&quot;)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="-250" y="90" width="290" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="N2piqDEVKtFyNAL_sK7T-12" value="@GetMapping(value = &quot;/currency-converter/from/{from}/to/{to}/quantity/{quantity}&quot;)" style="text;whiteSpace=wrap;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="200" y="-30" width="470" height="40" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
