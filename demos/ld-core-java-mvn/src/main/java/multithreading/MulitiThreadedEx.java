@@ -5,10 +5,12 @@ public class MulitiThreadedEx {
 //        PROCESS / ONE THREAD
         Thread.currentThread().setName("Sanjay");
         System.out.println(Thread.currentThread().getName() + " started the competition!");
-        AbhishekThread arlanThread = new AbhishekThread();
-        SelvaThread janThread = new SelvaThread();
-        arlanThread.start();
-        janThread.start();
+        AbhishekThread abhishekThread = new AbhishekThread();
+        SelvaThread selvaThread = new SelvaThread();
+//        abhishekThread.start();
+        Thread abhishekThread1 = new Thread(abhishekThread);
+        abhishekThread1.start();
+        selvaThread.start();
         System.out.println("Sleeping for some time....");
         Thread.currentThread().sleep(5000);
 //        arlanThread.join();
@@ -37,7 +39,7 @@ class SelvaThread  extends Thread{
        compute1.odd();
     }
 }
-class AbhishekThread extends Thread{
+class AbhishekThread implements Runnable{
     @Override
     public void run() {
         Compute1 compute1 = new Compute1();
