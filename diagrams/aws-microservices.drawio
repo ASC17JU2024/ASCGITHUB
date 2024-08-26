@@ -348,7 +348,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="qAnvKQ0jKetL_zttTP2N" name="COORDINATING MICROSERVICES">
-    <mxGraphModel dx="1900" dy="1721" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1725" dy="1618" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -381,6 +381,26 @@
         </mxCell>
         <mxCell id="N2piqDEVKtFyNAL_sK7T-12" value="@GetMapping(value = &quot;/currency-converter/from/{from}/to/{to}/quantity/{quantity}&quot;)" style="text;whiteSpace=wrap;fontSize=18;" vertex="1" parent="1">
           <mxGeometry x="200" y="-30" width="470" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="N2piqDEVKtFyNAL_sK7T-15" value="CurrencyExchange&lt;div&gt;8000&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="260" y="360" width="120" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="N2piqDEVKtFyNAL_sK7T-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="N2piqDEVKtFyNAL_sK7T-16" target="N2piqDEVKtFyNAL_sK7T-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="N2piqDEVKtFyNAL_sK7T-20" value="Text" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="N2piqDEVKtFyNAL_sK7T-18">
+          <mxGeometry x="-0.2727" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="N2piqDEVKtFyNAL_sK7T-16" value="Booking , cost(dollars)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="-20" y="400" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="N2piqDEVKtFyNAL_sK7T-17" value="database" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="10" y="560" width="60" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="N2piqDEVKtFyNAL_sK7T-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.333;entryY=0.583;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="N2piqDEVKtFyNAL_sK7T-16" target="N2piqDEVKtFyNAL_sK7T-15">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
